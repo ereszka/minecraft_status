@@ -1,7 +1,7 @@
 
 # Minecraft Server x Ngrok Status
 
-Page displaying status and address of Minecraft server running on ngrok (addresses change on each restart and I can't bother sending it each time to my friends)
+Page displaying status and address of Minecraft server running on ngrok (addresses change on each restart and I can't bother sending it each time to my friends). The UI is simple (if your mind still lives in 2005), I'll let you discover it yourself.
 
 ## Run Locally
 
