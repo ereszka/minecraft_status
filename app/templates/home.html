@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello from Gaycraft</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+  <h1>A Minecraft server might me running in my living room!</h1>
+  <br>
+  <h3>Is it running? 
+    {% if data.endpoints[0].proto == "tcp" %}
+    Yes!
+    <h3>Does it have an address? (yes!): <i id="address">{{data.endpoints[0].public_url}}</i></h3>
+    <button class="btn" onclick="copyContent()">Copy Server Address</button>
+    {% else %}
+    No:(
+  {%endif %} 
+  </h3>
+
+
+<script>
+  let text = document.getElementById('address').innerHTML;
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+</script>
+
+</body>
